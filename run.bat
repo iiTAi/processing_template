@@ -9,4 +9,6 @@ for /d %%D in ("%CURRENT_DIR%\src\*") do (
     xcopy "%%D\*" "%OUTPUT_DIR%\" /y /q >nul
 )
 
+xcopy "%CURRENT_DIR%\resources\*" "%OUTPUT_DIR%\resources\" /s /y /q >nul
+
 processing-java --sketch="%OUTPUT_DIR%" --run >nul
